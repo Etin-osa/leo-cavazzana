@@ -1,0 +1,34 @@
+// _Custom scss
+@import 'custom';
+
+
+// Menu scss
+@import 'menu';
+
+
+// Home scss
+@import 'home';
+
+
+// Responsive scss
+@import 'responsive';
+
+
+
+
+body {
+  background: $main-color2;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color1;
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  fill: $main-color1;
+}

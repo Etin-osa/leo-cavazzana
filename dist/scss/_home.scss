@@ -1,0 +1,221 @@
+.main {
+	padding: 0 2.1rem;
+
+	section.about {
+		display: flex;
+		flex-direction: column;
+
+		// First section
+		.about-div {
+			color: $main-color1;
+			font-family: $font-noto;
+			text-align: center;
+
+			// Inner section 1
+			&-logo {
+				animation: opacDisp 1.2s ease-in-out 1 forwards;
+
+				ion-icon {
+					--ionicon-stroke-width: 16px;
+					font-size: 60px;
+				}
+			}
+
+			// Inner section 2
+			&-info {
+				&Head {
+					padding: 6vw 0 4vw 0;
+					
+					h2 {
+						font-size: 8.8vw;
+						line-height: 7.8vw;
+
+						.about-div-infoHead__1,
+						.about-div-infoHead__2 {
+							overflow: hidden;
+
+							div {
+								opacity: 0;
+								animation: upTrans .8s linear 2s 1 forwards;
+							}
+						}
+
+						.about-div-infoHead__2 {
+							padding-bottom: 2vw;
+						}
+					}
+				}
+
+				&-story {
+					line-height: 4.1vw;
+					font-weight: 400;
+					font-size: 3.6vw;
+					padding-bottom: 3vw;
+
+					&__1,
+					&__2 {
+						overflow: hidden;
+
+						.get {
+							opacity: 0;
+							animation: upTrans .8s ease 2.1s 1 forwards;
+						}
+						
+						.gett {
+							opacity: 0;
+							animation: upTrans .8s ease 2.2s 1 forwards;
+						}
+					}
+				}
+			}
+		}
+
+		// second section
+		.about-img {
+			.swiper {
+				&-container {
+					width: 80vw;
+					margin: 8.5vw auto;
+				}
+
+				&-slide {
+					img {
+						width: 100%;
+						opacity: 0;
+						animation: leftTrans 1s ease 2.2s 1 forwards;
+					}
+				}
+			}
+
+			// Img 2 section
+			&-abs {
+				width: 45vw;
+				margin: 0 auto 3.2rem auto;
+
+				&__inner {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		// Third section
+		.about-media {
+			position: fixed;
+			bottom: 30px;
+			right: 10px;
+
+			&-inner div {
+				margin: 2.9rem 0;
+
+				a ion-icon {
+					font-size: 4vw;
+				}
+			}
+		}
+	}
+
+	section.client {
+		display: flex;
+		font-family: $font-noto;
+		flex-direction: column;
+		color: $main-color1;
+
+		// First section
+		.client {
+			&-link {
+				padding-bottom: 13vw;
+
+				&__inner {
+					a {
+						font-size: 4.2vw;
+						font-weight: 700;
+
+						ion-icon {
+							transform: translateY(20%);
+						}
+					}
+				}
+			}
+
+			&-contact {
+				div {
+					font-size: 4.2vw;
+				}
+
+				&__number {
+					a {
+						&:hover {
+							font-weight: bolder;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section.prompt {
+		margin-top: 13vw;
+		border-top: 1px solid black;
+		color: $main-color1;
+		font-family: $font-noto;
+
+		.prompt__nat {
+			padding: 4.5vw 0;
+
+			&-prim {
+				font-size: 4vw;
+
+				p {
+					a {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes opacDisp {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes upTrans {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(-50%);
+	}
+	75% {
+		opacity: 1;
+		transform: translateY(-20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes leftTrans {
+	0% {
+		opacity: 1;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

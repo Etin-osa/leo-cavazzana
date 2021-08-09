@@ -1,0 +1,422 @@
+@include media-tab {
+	header {
+		.div-Head {
+			padding: 8.2vw 0.9rem 12.5vw 0.9rem;
+
+			&-menu {
+				top: 74px;
+				left: 20px;
+			}
+
+			&-logo__link {
+				svg {
+					width: 22vw;
+				}
+			}
+		}
+	}
+
+	// Main
+	.main {
+		// section about
+		section.about {
+			// Main Head
+			.about-div-info {
+				&Head {
+					padding: 11vw 0 2.5vw 0;
+				}
+
+				&-story {
+					font-size: 3vw;
+				}
+			}
+
+			// second section
+			.about-img {
+				position: relative;
+				
+				.swiper {
+					&-container {
+						width: 86vw;
+						height: 65vh;
+						margin: 9.3vw auto 5vw auto;
+					}
+
+					&-slide {
+						img {
+							height: 100%;
+						}
+					}
+				}
+
+				// Img 2 .section
+				&-abs {
+					position: absolute;
+					width: 40vw;
+					top: 40%; left: -17px;
+					z-index: 50;
+				}
+			}
+
+			// Media
+			.about-media {
+				right: 20px;
+				bottom: 20px;
+
+				&-inner div {
+					margin: 8vw 0;
+				}
+			}
+		}
+
+		// section client
+		section.client {
+			width: 86vw;
+			margin: auto;
+			padding: 0 1.5vw;
+
+			// client contact
+			.client {
+				&-link {
+					padding-bottom: 1vw;
+
+					&__inner {
+						a {
+							font-size: 2.5vw;
+						}
+					}
+				}
+
+				&-contact {
+					display: flex;
+					justify-content: space-between;
+
+					div {
+						font-size: 2.5vw;
+					}
+				}
+			}
+		}
+
+		// section prompt
+		section.prompt {
+			margin-top: 10vw;
+
+			.prompt__nat {
+				display: flex;
+				justify-content: space-between;
+				padding: 3vw;
+
+				&-prim {
+					font-size: 2.2vw;
+				}
+			}
+		}
+	}
+}
+
+@include media-mini {
+	header {
+		.div-Head {
+			padding-top: 8.4vw;
+
+			&-menu {
+				top: 100px;
+				left: 30px;
+			}
+		}
+	}
+
+	// Main
+	.main {
+		// section about
+		section.about {
+			.about-div {
+				&-logo {
+					ion-icon {
+						font-size: 70px;
+					}
+				}
+
+				&-infoHead {
+					padding-top: 13vw;
+				}
+			}
+		}
+
+		// section prompt
+		section.prompt {
+			.prompt__nat {
+				padding: 2.7vw 5vw;
+			}
+		}
+	}
+}
+
+@include media-lg {
+	header {
+		.div-Head {
+               justify-content: space-between;
+               align-items: center;
+			padding: 2.9vw 4.2vw 0 4.2vw;
+
+			// First section
+			&-menu {
+				margin-right: 12.5vw;
+				position: relative;
+				top: 0;
+				left: 0;
+
+				&__item {
+					top: 40%; left: 3%;
+				}
+			}
+
+			// second section
+			&-logo {
+				transform: translateY(.3vw);
+
+				&__link {
+					svg {
+						width: 8.51vw;
+					}
+				}
+			}
+
+			// Third section
+			&-contact {
+				display: inline-block;
+				
+				&__ul {
+					display: flex;
+				}
+
+				&__li {
+                         font-size: .75vw;
+                         letter-spacing: .7px;
+
+					&:first-child {
+						padding-right: 1vw;
+                         }
+                    }
+                    
+                    &__span {
+                         position: relative;
+                         padding-left: .7vw;
+
+                         &:first-child {
+                              .div-Head-contact__link {
+                                   font-weight: 700;
+                              }
+                         }
+
+                         &:last-child {
+                              margin-left: .4vw;
+
+                              &::before {
+                                   content: '';
+                                   position: absolute;
+                                   left: 0; top: .15vw;
+                                   width: 2px;
+                                   height: .8vw;
+                                   background: rgba($black-1, .3);
+                              }
+                         }
+                    }
+
+
+                    &__link {
+					position: relative;
+					font-weight: 500;
+
+                         &::after {
+                              @include hoverLink;
+                         }
+                         
+                         &:hover {
+                              &::after {
+                                   @include hoverLinkAfter;
+                              }
+                         }
+                    }
+			}
+		}
+	}
+
+
+	// Main section
+	.main {
+		margin: 1.8vw 4.1vw 0 4.1vw;
+		padding: 0;
+
+		// About section
+		section.about {
+			flex-direction: row;
+
+			// First section
+			.about-div {
+				text-align: left;
+				padding-right: .8vw;
+
+				// Inner section 1
+				&-logo {
+					ion-icon {
+						font-size: 3vw;
+					}
+				}
+
+				// Inner section 2
+				&-info {
+					&Head {
+						font-family: $font-work;
+						padding: 7rem 0 .8vw 0;
+
+						h2 {
+							font-size: 2.9vw;
+							font-weight: 500;
+							line-height: 2.9vw;
+
+							.about-div-infoHead__2 {
+								padding-bottom: .2rem;
+							}
+						}
+					}
+
+
+					&-story {
+						padding-bottom: 0;
+						line-height: 1.1vw;
+						font-size: 1vw;
+					}
+				}
+			}
+
+
+			// second section
+			.about-img {
+				margin: 0 3.5vw;
+				padding: 0;
+				height: 69.8vh;
+
+				.swiper {
+					&-container {
+						width: 60.5vw;
+						height: 100%;
+						margin: 0;
+					}
+
+					&-slide {
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				&-abs {
+					position: absolute;
+					width: 15vw;
+					top: 75%; left: -8.1%;
+					margin: 0;
+
+					&__inner {
+						overflow: hidden;
+
+						img {
+							opacity: 0;
+							animation: rightTrans 1s ease 2.2s 1 forwards;
+						}
+					}
+				}
+			}
+
+
+			// Media
+			.about-media {
+				position: relative;
+				right: 0; bottom: 0;
+				margin: 8rem 2.9vw;
+
+				&-inner {
+					
+					div {
+						margin: 2.9vw 0;
+
+						a ion-icon {
+							font-size: 1.5vw;
+						}
+					}
+				}	
+			}
+		}
+
+
+
+		// client section
+		section.client {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 85vw;
+			margin: 2vw 0;
+			padding: 0 1vw;
+			
+			.client {
+				
+				&-link {
+					// border: 1px solid black;
+					padding-bottom: 0;
+					
+					&__inner {
+						a {
+							font-size: .9vw;
+							font-weight: 900;
+						}
+					}
+
+				}
+
+				&-contact {
+					width: 72.8%;
+					align-items: center;
+					// border: 1px solid black;
+
+					div {
+						font-size: .9vw;
+					}
+				}
+			}
+		}
+
+
+
+
+		// prompt section
+		section.prompt {
+			margin-top: 6vw;
+			margin-left: -.6vw;
+
+			.prompt__nat {
+				padding: 1.2vw 0;
+
+				&-prim {
+					font-size: .8vw;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@keyframes rightTrans {
+	0% {
+		opacity: 1;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

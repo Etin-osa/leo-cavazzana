@@ -1,0 +1,57 @@
+header {
+	.div-Head {
+		display: flex;
+		justify-content: center;
+		padding: 3.3rem .9rem 2rem .9rem;
+		font-family: $font-noto;
+
+		// first section
+		&-menu {
+			position: fixed;
+			left: 11px;
+			top: 66px;
+			height: 30px;
+			width: 30px;
+
+			&__item {
+				position: absolute;
+				top: 60%;
+				height: 2px;
+				width: 23px;
+				background: $main-color1;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: -8px;
+					background: $main-color1;
+					height: 2px;
+					width: 23px;
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: 8px;
+					background: $main-color1;
+					height: 2px;
+					width: 23px;
+				}
+			}
+		}
+
+		// Second section
+		&-logo {
+			&__link {
+				svg {
+					width: 35vw;
+				}
+			}
+		}
+
+		// Third section
+		&-contact {
+			display: none;
+		}
+	}
+}
